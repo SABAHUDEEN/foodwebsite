@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAMOUSFOODS</title>
+    <link rel="icon" href="flogo.webp">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha384-rNSldXGxJ1dpGVv4U02d5OVypSllg5k0hp0PIFVrW3V34V2u5/YcthoiZzdaLto9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="footer.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scrollbar */
+        }
+
+        .body-image {
+            /* Adjust the URL to your image */
+            /* background-image: url(images/body.jpg); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            height: 100vh;
+            position: fixed;
+            width: 100%;
+            z-index: -1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #e3ceae, #c4ecc4, #a2c4e5);
+            -webkit-background-clip: text;
+            color: transparent;
+            display: inline-block;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffcc00;
+            text-shadow: 0px 1px 1px;
+        }
+        h6{
+  color: rgb(239, 186, 87);
+}
+        a{
+  text-decoration: none;
+}
+        .btn{
+  color: #000;
+  border: 1px solid;
+  background-color:rgb(255, 255, 255,0);
+
+}
+.btn:hover{
+  color: #f8e2e2;
+  box-shadow: 2px 2px 2px 2px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:monospace;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-image: url(images/body.jpg);
+  background-color: #070707;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.contact-section,
+.site-footer,
+.fixed-top {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-section {
+  position: relative;
+  z-index: 3;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.contact-container {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-header {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.section-header h2 {
+  color: wheat;
+  font-weight: bold;
+  font-size: 3em;
+  margin-bottom: 20px;
+}
+
+.section-header p {
+  color: #d5c9c9;
+}
+
+.contact-row  {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.contact-info {
+  width: 50%;
+}
+
+.contact-info-item {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 70px;
+  width: 70px;
+  background-color:#959292;;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 25px;
+  line-height: 70px;
+}
+
+.contact-info-content {
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+    color:wheat;
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+    color: #959292;
+  font-size: 1em;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  width: 45%;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: wheat;
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea{
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #ede0e0;
+  outline: none;
+  resize: none;
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #959292;
+}
+
+.contact-form .input-box input:focus ~ span,
+.contact-form .input-box textarea:focus ~ span{
+    color: #959292;
+  font-size: 12px;
+  transform: translateY(-30px);
+}
+
+.contact-form .input-box input[type="submit"]
+{
+  width: 100%;
+  color:wheat;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 3px solid wheat;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0); 
+}
+
+.contact-form .input-box input[type="submit"]:hover
+{
+  background: #5b5858;
+  color: #070707;
+}
+
+@media (max-width: 991px) {
+  .contact-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .contact-row {
+    flex-direction: column;
+  }
+  
+  .contact-info {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+  
+  .contact-form {
+    width: 100%;
+  }
+}
+    </style>
+</head>
+<body>
+    <div class="body-image"></div>
+
+    <div class="fixed-top">
+        <div class="container-fluid bg-dark stick">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent ">
+                <i class="logo">FOOD HEAVEN</i>
+                <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="nav-links navbar-nav ms-auto">
+                        <li class="nav-item"><a href="index.html" class="nav-link navhead"><i class="fa fa-home"></i> HOME</a></li>
+                        <li class="nav-item"><a href="recipe1.html" class="nav-link navhead"><i class="fa fa-cutlery"></i> RECIPES</a></li>
+                        <li class="nav-item"><a href="location.html" class="nav-link navhead"><i class="fa fa-map-marker"></i> LOCATION</a></li>
+                        <li class="nav-item"><a href="gallary.html" class="nav-link navhead"><i class="fa fa-image"></i> GALLERY</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link navhead"><i class="fa fa-info-circle"></i> ABOUT</a></li>
+                        <li class="nav-item"><a href="contactus.html" class="nav-link navhead"><i class="fa fa-envelope"></i> CONTACT US</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <section class="contact-section">
+    
+        <div class="section-header">
+          <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+          </div>
+        </div>
+        
+        <div class="contact-container">
+          <div class="contact-row">
+            
+            <div class="contact-info">
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa fa-home"></i>
+                </div>
+                
+                <div class="contact-info-content">
+                  <h4>Address</h4>
+                  <p>10th sector,59th street,kk nagar,chennai <br>
+                   pincode: (60078) </p>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa fa-phone"></i>
+                </div>
+                
+                <div class="contact-info-content">
+                  <h4>Phone</h4>
+                  <p>+91-9790334323</p>
+                </div>
+              </div>
+              
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="fa fa-envelope"></i>
+                </div>
+                
+                <div class="contact-info-content">
+                  <h4>Email</h4>
+                 <p>sabasaba8@gmail.com</p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="contact-form">
+             
+              <form id="contact-form">
+                <h2>Send Message</h2>
+
+              ?> -->
+                <div class="input-box">
+                  <input type="text" required="true" name="uname">
+                  <span>Full Name</span>
+                </div>
+                
+                <div class="input-box">
+                  <input type="email" required="true" name="email">
+                  <span>Email</span>
+                </div>
+                <div class="input-box">
+                  <input type="text" required="true" name="subject">
+                  <span>subject</span>
+                </div>
+                
+                <div class="input-box">
+                  <textarea required="true" name="msg"></textarea>
+                  <span>Type your Message...</span>
+                </div>
+                
+                <div class="input-box">
+                  <input type="submit" value="Send" name="btn-send">
+                </div>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+      </section>
+       <!-- Footer -->
+       <footer
+       class="site-footer text-center text-lg-start text-white"
+       >
+ <!-- Section: Social media -->
+ <section
+          class="footer-social d-flex justify-content-between p-4"
+          >
+   <!-- Left -->
+   <div class="me-5 footer-social-text">
+     <span>Get connected with us on social networks:</span>
+   </div>
+   <!-- Left -->
+
+   <!-- Right -->
+   <div class="foot footer-social-icons">
+     <a href="" class="text-white me-4 ">
+       <i class="fa fa-facebook-f "></i>
+     </a>
+     <a href="" class="text-white me-4">
+       <i class="fa fa-twitter"></i>
+     </a>
+     <a href="" class="text-white me-4">
+       <i class="fa fa-google"></i>
+     </a>
+     <a href="" class="text-white me-4">
+       <i class="fa fa-instagram"></i>
+     </a>
+     <a href="" class="text-white me-4">
+       <i class="fa fa-linkedin"></i>
+     </a>
+     <a href="" class="text-white me-4">
+       <i class="fa fa-github"></i>
+     </a>
+   </div>
+   <!-- Right -->
+ </section>
+ <!-- Section: Social media -->
+
+ <!-- Section: Links  -->
+ <section class="">
+   <div class="container text-center text-md-start mt-5">
+     <!-- Grid row -->
+     <div class="row mt-3">
+       <!-- Grid column -->
+       <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+         <!-- Content -->
+         <h6 class="text-uppercase fw-bold footer-title">FAMOUS FOODS</h6>
+         <hr
+             class="mb-4 mt-0 d-inline-block mx-auto footer-hr"
+             />
+         <p>
+          Food, substance consisting essentially of protein, carbohydrate, fat, and other nutrients used in the body of an organism to sustain growth and vital processes and to furnish energy. 
+         </p>
+       </div>
+       <!-- Grid column -->
+
+       <!-- Grid column -->
+       <div class="col-md-2 foot col-lg-2 col-xl-2 mx-auto mb-4">
+         <!-- Links -->
+         <h6 class="text-uppercase fw-bold footer-title">TAKE</h6>
+         <hr
+             class="mb-4 mt-0 d-inline-block mx-auto footer-hr-alt"
+             />
+             <p>
+              <a href="index.html" class="text-white">home</a>
+            </p>
+            <p>
+              <a href="recipe1.html" class="text-white">recipe</a>
+            </p>
+            <p>
+              <a href="location.html" class="text-white">location </a>
+            </p>
+            <p>
+              <a href="gallary.html" class="text-white">gallery</a>
+            </p>
+            <p>
+              <a href="about.html" class="text-white">about us</a>
+            </p>
+            <p>
+              <a href="contactus.html" class="text-white">contact us</a>
+            </p>
+       </div>
+       <!-- Grid column -->
+
+       <!-- Grid column -->
+       <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+         <!-- Links -->
+         <h6 class="text-uppercase fw-bold footer-title">USEFUL LINK</h6>
+         <hr
+             class="mb-4 mt-0 d-inline-block mx-auto footer-hr-alt"
+             />
+         <p>
+           <a href="#!" class="text-white">Your Account</a>
+         </p>
+         <p>
+           <a href="#!" class="text-white">Become an Affiliate</a>
+         </p>
+         <p>
+           <a href="#!" class="text-white">Shipping Rates</a>
+         </p>
+         <p>
+           <a href="#!" class="text-white">Help</a>
+         </p>
+       </div>
+       <!-- Grid column -->
+
+       <!-- Grid column -->
+       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+         <!-- Links -->
+         <h6 class="text-uppercase fw-bold footer-title">Contact</h6>
+         <hr
+             class="mb-4 mt-0 d-inline-block mx-auto footer-hr-alt"
+             />
+         <p><i class="fa fa-home mr-3"></i>pallipadai,chidambaram(608001)</p>
+         <p><i class="fa fa-envelope mr-3"></i> sabasaba85603@gmail.com.com</p>
+         <p><i class="fa fa-phone mr-3"></i> + 91 234 567 88</p>
+         <p><i class="fa fa-print mr-3"></i> + 91 234 567 89</p>
+       </div>
+       <!-- Grid column -->
+     </div>
+     <!-- Grid row -->
+   </div>
+ </section>
+ <!-- Section: Links  -->
+
+ 
+</footer>
+<!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
